@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.android.wicsapplication.LoginPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wicslogo"
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:padding="16dp"
+                android:layout_marginBottom="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wicslogo" />
+
+
+            <EditText
+                android:id="@+id/watiam"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_below="@id/wicslogo"
+                android:layout_centerHorizontal="true"
+                android:hint="WatIAM"
+                android:textColor="@android:color/darker_gray"
+                android:padding="8dp"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_below="@id/watiam"
+                android:layout_centerHorizontal="true"
+                android:hint="Password"
+                android:padding="8dp"
+                android:inputType="textPassword"
+                android:textColor="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/showPassword"
+                android:layout_below="@id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/pwCheckBox"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginRight="8dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Show Password"
+                    android:textSize="16dp"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:layout_marginTop="8dp"
+                android:id="@+id/loginButton"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/showPassword"
+                android:textColor="#FFFFFF"
+                android:onClick="goToAuthHomePage"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Continue without login"
+                android:layout_marginTop="8dp"
+                android:id="@+id/continueButton"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/loginButton"
+                android:textColor="#FFFFFF"
+                android:onClick="goToHomePage"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

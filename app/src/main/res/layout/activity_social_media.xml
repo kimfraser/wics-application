@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.android.wicsapplication.SocialMedia">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wicslogo"
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:padding="16dp"
+                android:layout_marginBottom="40dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wicslogo" />
+
+            <Button
+                android:id="@+id/fbPage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wicslogo"
+                android:onClick="goToFbPage"
+                android:text="WiCS Facebook Page"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/fbGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fbPage"
+                android:text="WiCS Facebook Group"
+                android:onClick="goToFbGroup"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/uGradFbGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fbGroup"
+                android:text="WiCS Undergrad Facebook Page"
+                android:onClick="goToUGradFbPage"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/uGradIg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uGradFbGroup"
+                android:text="WiCS Undergrad Instagram"
+                android:onClick="goToUgradIg"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/uGradTweets"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/uGradIg"
+                android:text="WiCS Undergrad Twitter"
+                android:onClick="goToUgradTwitter"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

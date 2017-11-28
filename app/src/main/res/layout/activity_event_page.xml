@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context="com.example.android.wicsapplication.EventPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:src="@drawable/dinnerwprofs" />
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image"
+                android:textSize="60dp"
+                android:text="Title"/>
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:text="Date"
+                android:layout_below="@id/title"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/date"
+                android:text="Location"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/descriptionHdr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location"
+                android:text="Description"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/descriptionBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/descriptionHdr"
+                android:text="Vivamus in consequat nulla. Donec blandit ex ac sagittis venenatis. Vivamus ultrices egestas dolor dictum euismod. Donec dictum ipsum vel enim egestas, a tincidunt mauris gravida. In efficitur ipsum vitae leo luctus luctus. Praesent tempor a sapien et facilisis. Cras risus mi, mollis quis sodales eget, viverra at nibh. Etiam tincidunt pharetra dolor at luctus. Praesent ultricies ligula ut lectus varius, in eleifend quam placerat. Mauris purus libero, dignissim a nisi vitae, tincidunt porttitor leo. Vivamus volutpat ipsum et arcu finibus consectetur. Aliquam a eros tincidunt, blandit nibh et, facilisis odio."
+                android:textSize="24dp" />
+
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descriptionBody"
+                android:text="Register"/>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+
+
+
+</RelativeLayout>

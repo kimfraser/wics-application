@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="com.example.android.wicsapplication.HomePage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wicslogo"
+                android:layout_width="400dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:padding="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/wicslogo" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/wicslogo"
+                android:layout_centerHorizontal="true"
+                android:padding="40dp"
+                android:textSize="24dp"
+                android:text="Welcome to the WiCS App" />
+
+            <Button
+                android:id="@+id/wicsevents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="WiCS Events"
+                android:layout_below="@id/textView"
+                android:onClick="goToEventsPage"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/womenseventscalendar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wicsevents"
+                android:text="Women's Events Calendar"
+                android:onClick="goToWomensEvents"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/newsletter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/womenseventscalendar"
+                android:text="Newsletter"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/socialmedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newsletter"
+                android:text="Social Media"
+                android:onClick="goToSocialMedia"
+                android:textColor="#FFFFFF"/>
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/socialmedia"
+                android:text="Logout"
+                android:textColor="#FFFFFF"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

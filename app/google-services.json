@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "839533038911",
+    "firebase_url": "https://wics-application.firebaseio.com",
+    "project_id": "wics-application",
+    "storage_bucket": "wics-application.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839533038911:android:be442b509b1881a5",
+        "android_client_info": {
+          "package_name": "com.example.android.wicsapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839533038911-dktrqg3vbqjvrbm11bhscukoa3vaoq3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.wicsapplication",
+            "certificate_hash": "08a72e61dc7651703f63f95e8c631d594e3daca1"
+          }
+        },
+        {
+          "client_id": "839533038911-6stgsn4apptghtmj3ljj9qcjcbt3u6jl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDPGErcbor7xF8Wj-oXuDod_47mHm0R-ok"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839533038911-6stgsn4apptghtmj3ljj9qcjcbt3u6jl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
