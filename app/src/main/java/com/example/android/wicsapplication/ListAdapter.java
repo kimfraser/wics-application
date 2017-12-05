@@ -2,6 +2,7 @@ package com.example.android.wicsapplication;
 
 import android.app.Activity;
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,38 +20,30 @@ import java.util.List;
 
 public class ListAdapter extends ArrayAdapter<ListItem> {
 
+    private Activity context;
+    private List<ListItem>  eventsList;
 
-    public ListAdapter(Activity context, ArrayList<ListItem> item) {
-        super(context, 0, item);
+    public ListAdapter(Activity context, List<ListItem> items) {
+        super(context, R.layout.list_item, items);
+        this.context = context;
+        this.eventsList = items;
     }
 
-
+    @NonNull
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Check if the existing view is being reused, otherwise inflate the view
-        View listItemView = convertView;
-        if(listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
-        }
+        LayoutInflater inflater = context.getLayoutInflater();
 
-        // Get the {@link AndroidFlavor} object located at this position in the list
-        ListItem currentListItem = getItem(position);
+        View listViewItem = inflater.inflate(R.layout.list_item, null, true);
 
-        // Find the TextView in the list_item.xml layout with the ID version_name
-        TextView nameTextView = (TextView) listItemView.findViewById(R.id.Title);
-        // Get the version name from the current AndroidFlavor object and
-        // set this text on the name TextView
-        nameTextView.setText(currentListItem.getEventName());
+        TextView textViewTitle = (TextView) listViewItem.findViewById(R.id.mTitle);
+        TextView textViewDate = (TextView) listViewItem.findViewById(R.id.mDate);
 
-        // Find the TextView in the list_item.xml layout with the ID version_number
-        TextView numberTextView = (TextView) listItemView.findViewById(R.id.Date);
-        // Get the version number from the current AndroidFlavor object and
-        // set this text on the number TextView
-        numberTextView.setText(currentListItem.getEventDate());
+        ListItem item = eventsList.get(position);
+        String name = item.getEventName();
+        textViewTitle.setText(name);
+        textViewDate.setText(item.getEventDate());
 
-        // Return the whole list item layout (containing 2 TextViews and an ImageView)
-        // so that it can be shown in the ListView
-        return listItemView;
+        return listViewItem;
     }
 }
