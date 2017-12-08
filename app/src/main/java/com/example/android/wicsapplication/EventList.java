@@ -1,7 +1,10 @@
 package com.example.android.wicsapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -21,6 +24,8 @@ public class EventList extends AppCompatActivity {
     ListView listViewEvents;
 
     List<ListItem> eventsList;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,5 +69,18 @@ public class EventList extends AppCompatActivity {
 
             }
         });
+
+        listViewEvents.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                // get event info
+                ListItem eventInfo = eventsList.get(position);
+                Intent intent = new Intent(view.getContext(), EventPage.class);
+                intent.putExtra("EventInfo", eventInfo);
+
+                startActivity(intent);
+            }
+        });
+
     }
 }

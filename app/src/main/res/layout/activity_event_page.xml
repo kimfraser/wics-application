@@ -25,28 +25,33 @@
                 android:scaleType="fitXY"
                 android:adjustViewBounds="true"
                 android:src="@drawable/dinnerwprofs" />
+
             <TextView
-                android:id="@+id/title"
+                android:id="@+id/eventTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/image"
-                android:textSize="60dp"
-                android:text="Title"/>
+                android:textSize="60dp"/>
 
             <TextView
                 android:id="@+id/date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="40dp"
-                android:text="Date"
-                android:layout_below="@id/title"/>
+                android:layout_below="@id/eventTitle"/>
+
+            <TextView
+                android:id="@+id/eventTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40dp"
+                android:layout_below="@id/date"/>
 
             <TextView
                 android:id="@+id/location"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/date"
-                android:text="Location"
+                android:layout_below="@+id/eventTime"
                 android:textSize="40dp" />
 
             <TextView
@@ -54,7 +59,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/location"
-                android:text="Description"
                 android:textSize="40dp" />
 
             <TextView
@@ -62,7 +66,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/descriptionHdr"
-                android:text="Vivamus in consequat nulla. Donec blandit ex ac sagittis venenatis. Vivamus ultrices egestas dolor dictum euismod. Donec dictum ipsum vel enim egestas, a tincidunt mauris gravida. In efficitur ipsum vitae leo luctus luctus. Praesent tempor a sapien et facilisis. Cras risus mi, mollis quis sodales eget, viverra at nibh. Etiam tincidunt pharetra dolor at luctus. Praesent ultricies ligula ut lectus varius, in eleifend quam placerat. Mauris purus libero, dignissim a nisi vitae, tincidunt porttitor leo. Vivamus volutpat ipsum et arcu finibus consectetur. Aliquam a eros tincidunt, blandit nibh et, facilisis odio."
                 android:textSize="24dp" />
 
             <Button
@@ -70,6 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/descriptionBody"
+                android:textColor="#ffffff"
                 android:text="Register"/>
         </RelativeLayout>
     </ScrollView>

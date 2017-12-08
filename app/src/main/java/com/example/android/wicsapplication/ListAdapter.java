@@ -11,7 +11,10 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -40,8 +43,7 @@ public class ListAdapter extends ArrayAdapter<ListItem> {
         TextView textViewDate = (TextView) listViewItem.findViewById(R.id.mDate);
 
         ListItem item = eventsList.get(position);
-        String name = item.getEventName();
-        textViewTitle.setText(name);
+        textViewTitle.setText(item.getEventName());
         textViewDate.setText(item.getEventDate());
 
         return listViewItem;
