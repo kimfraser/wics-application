@@ -3,6 +3,8 @@ package com.example.android.wicsapplication;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,7 +21,8 @@ public class LoginPage extends AppCompatActivity {
 
     private String watiam;
     private String password;
-    public static boolean AUTH = false;
+
+    public static boolean AUTH = true;
 
     EditText etPassword;
     CheckBox cbPassword;
@@ -29,6 +32,11 @@ public class LoginPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //SharedPreferences settings = getSharedPreferences("Settings", Context.MODE_PRIVATE);
+        //SharedPreferences.Editor editor = settings.edit();
+        //editor.putBoolean("Auth", false);
+        //editor.apply();
 
         //get the password text
         etPassword = (EditText) findViewById(R.id.password);
@@ -85,6 +93,7 @@ public class LoginPage extends AppCompatActivity {
 
     public void goToHomePage (View view)  {
         Intent homePage = new Intent(this, HomePage.class );
+        homePage.putExtra("AUTH", AUTH);
         startActivity(homePage);
     }
 }
